@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Sentenser",
+  "version": "0.0.1",
+  "description": "A simple extension to make it easy to edit the emotional content of text your writing",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "logo.png"
+  }
+}
+
