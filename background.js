@@ -23,24 +23,18 @@ function handleClick(info, tab) {
     },
     body: JSON.stringify({
       "model": "gpt-3.5-turbo",
-      "messages": [{"role": "user", "content": `Rewrite the following text to be nicer:\n\n${info.selectionText}`}],
+      "messages": [{"role": "user", "content": `Rewrite the following text to be nicer. Remove any inappropriate content, but try to preserve the main thrust of what is being said:\n\n${info.selectionText}`}],
       "temperature": 0.7
     }), // Pass any data in the request body
   })
     .then((response) => response.json())
     .then((data) => {
       const text = data.choices[0].message.content;
-
-
       replaceSelectedText(text, tab);
       // replaceSelectedText(JSON.stringify(data, null, 4), tab);
-      // Handle the response data
-      // alert(`API response: ${data}`);
-      // Perform any further processing or actions based on the API response
     })
     .catch((error) => {
       replaceSelectedText(JSON.stringify(error, null, 4), tab);
-      // alert(`API error: ${error}`);
     });
 }
 
