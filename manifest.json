@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Sentenser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple extension to make it easy to edit the emotional content of text your writing",
   "permissions": ["contextMenus"],
   "background": {
