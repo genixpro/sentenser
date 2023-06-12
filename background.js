@@ -48,6 +48,22 @@ const prompts = [
       `Make it sound like how a government, large corporation or lawyer would write a press release. ` +
       promptEnding,
   },
+  {
+    "id": "romantic",
+    "title": "Romantic and Loving",
+    "prompt": `Rewrite the following text to be romantic and loving. ` +
+      `Make it sound like a cheesy line from a romantic comedy movie. ` +
+      promptEnding,
+  },
+  {
+    "id": "flirty",
+    "title": "Flirty and Sexy",
+    "prompt": `Rewrite the following text to be flirty and sexy. ` +
+      `It should sound suave and charming. ` +
+      `Maybe even a little bit naughty, but not over-the-top. ` +
+      `Flirtatious but not offensive. ` +
+      promptEnding,
+  },
 ]
 
 function findPromptById(id) {
